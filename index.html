@@ -26,11 +26,18 @@
 <p id="formMsg" class="hint" role="status"></p>
 </form>
 </section>
-<section class="panel">
-<div class="section-head"><h2>Glucose trends</h2><select id="range"><option value="7">Last 7 days</option><option value="30">Last 30 days</option><option value="90">Last 90 days</option></select></div>
-<div class="chart-wrap"><canvas id="chart" height="190" aria-label="Blood glucose trend chart"></canvas></div>
-<div class="stats"><div><span>Average</span><strong id="avg">—</strong></div><div><span>Lowest</span><strong id="low">—</strong></div><div><span>Highest</span><strong id="high">—</strong></div></div>
-<p class="hint">The chart shows recorded values only; it does not diagnose or determine whether a reading is safe for you.</p>
+<section class="panel trends-panel">
+<div class="section-head"><h2>Glucose trends by reading type</h2><select id="range" aria-label="Trend date range"><option value="7">Last 7 days</option><option value="30">Last 30 days</option><option value="90">Last 90 days</option><option value="all">All time</option></select></div>
+<p class="hint trend-intro">Each chart shows only readings from its category.</p>
+<div class="trend-grid">
+<div class="trend-card"><h3>Fasting</h3><div class="chart-wrap"><canvas id="chart-fasting" height="190" aria-label="Fasting glucose trend"></canvas></div><div class="stats"><div><span>Average</span><strong id="avg-fasting">—</strong></div><div><span>Lowest</span><strong id="low-fasting">—</strong></div><div><span>Highest</span><strong id="high-fasting">—</strong></div></div><small class="reading-count" id="count-fasting">0 readings</small></div>
+<div class="trend-card"><h3>Before meal</h3><div class="chart-wrap"><canvas id="chart-before" height="190" aria-label="Before meal glucose trend"></canvas></div><div class="stats"><div><span>Average</span><strong id="avg-before">—</strong></div><div><span>Lowest</span><strong id="low-before">—</strong></div><div><span>Highest</span><strong id="high-before">—</strong></div></div><small class="reading-count" id="count-before">0 readings</small></div>
+<div class="trend-card"><h3>1 hour after meal</h3><div class="chart-wrap"><canvas id="chart-after1" height="190" aria-label="One hour after meal glucose trend"></canvas></div><div class="stats"><div><span>Average</span><strong id="avg-after1">—</strong></div><div><span>Lowest</span><strong id="low-after1">—</strong></div><div><span>Highest</span><strong id="high-after1">—</strong></div></div><small class="reading-count" id="count-after1">0 readings</small></div>
+<div class="trend-card"><h3>2 hours after meal</h3><div class="chart-wrap"><canvas id="chart-after2" height="190" aria-label="Two hours after meal glucose trend"></canvas></div><div class="stats"><div><span>Average</span><strong id="avg-after2">—</strong></div><div><span>Lowest</span><strong id="low-after2">—</strong></div><div><span>Highest</span><strong id="high-after2">—</strong></div></div><small class="reading-count" id="count-after2">0 readings</small></div>
+<div class="trend-card"><h3>Bedtime</h3><div class="chart-wrap"><canvas id="chart-bedtime" height="190" aria-label="Bedtime glucose trend"></canvas></div><div class="stats"><div><span>Average</span><strong id="avg-bedtime">—</strong></div><div><span>Lowest</span><strong id="low-bedtime">—</strong></div><div><span>Highest</span><strong id="high-bedtime">—</strong></div></div><small class="reading-count" id="count-bedtime">0 readings</small></div>
+<div class="trend-card"><h3>Random</h3><div class="chart-wrap"><canvas id="chart-random" height="190" aria-label="Random glucose trend"></canvas></div><div class="stats"><div><span>Average</span><strong id="avg-random">—</strong></div><div><span>Lowest</span><strong id="low-random">—</strong></div><div><span>Highest</span><strong id="high-random">—</strong></div></div><small class="reading-count" id="count-random">0 readings</small></div>
+</div>
+<p class="hint">Charts display recorded values only. They do not diagnose or determine whether a reading is safe for you.</p>
 </section>
 <section class="panel">
 <div class="section-head"><h2>Reading history</h2><button id="exportCsv" class="ghost">Export CSV</button></div>

@@ -26,3 +26,7 @@ This version stores entries in IndexedDB on the device/browser. It does not incl
 
 ## Medical note
 This is a record-keeping tool, not a medical device. It does not provide diagnosis, treatment recommendations, or validated glucose alerts. Do not change medication based on the app.
+
+## Category trend charts update
+
+The dashboard now includes independent glucose trend charts for all six reading types: Fasting, Before meal, 1 hour after meal, 2 hours after meal, Bedtime, and Random. Each chart displays only its own category, with average, lowest, highest, and count statistics. The shared date filter supports 7 days, 30 days, 90 days, and All time. Existing records, history, CSV export, backup/restore, and local IndexedDB storage are retained.
